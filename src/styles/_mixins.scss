@@ -1,0 +1,7 @@
+@mixin generateColorVariable($color-map) {
+    @each $color, $shades in $color-map {
+        @each $shade, $value in $shades {
+            --clr-#{$color}-#{$shade}: #{$value};
+        }
+    }
+}

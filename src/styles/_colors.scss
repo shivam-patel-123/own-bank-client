@@ -1,0 +1,74 @@
+@use "sass:map";
+
+$colors-base: (
+    primary: (
+        main: hsl(212, 99%, 50%),
+    ),
+    secondary: (
+        main: hsl(48, 91%, 54%),
+        100: hsla(48, 91%, 54%, 0.2),
+    ),
+    neutral: (
+        light: hsl(0, 0%, 100%),
+        50: hsl(210, 25%, 98%),
+        100: hsl(210, 18%, 96%),
+        200: hsl(220, 17%, 93%),
+        300: hsl(220, 12%, 90%),
+        400: hsl(227, 13%, 86%),
+        500: hsl(223, 19%, 75%),
+        600: hsl(218, 18%, 64%),
+        700: hsl(223, 13%, 54%),
+        800: hsl(217, 10%, 41%),
+        900: hsl(223, 14%, 35%),
+        dark: hsl(220, 19%, 15%),
+        dark-100: hsl(218, 21%, 21%),
+        dark-200: hsl(219, 21%, 29%),
+        dark-300: hsl(219, 21%, 37%),
+        dark-400: hsl(219, 21%, 45%),
+        dark-500: hsl(219, 25%, 54%),
+    ),
+);
+
+// Color Vairables for Light Theme
+$colors-light: (
+    bg: (
+        50: map.get($colors-base, neutral, light),
+        100: map.get($colors-base, neutral, 50),
+        200: map.get($colors-base, neutral, 100),
+        300: map.get($colors-base, neutral, 200),
+        400: map.get($colors-base, neutral, 300),
+        500: map.get($colors-base, neutral, 400),
+    ),
+    txt: (
+        50: map.get($colors-base, neutral, dark),
+        100: map.get($colors-base, neutral, 800),
+        200: map.get($colors-base, neutral, 600),
+        300: map.get($colors-base, neutral, 400),
+    ),
+    card: (
+        50: map.get($colors-base, neutral, light),
+        100: map.get($colors-base, neutral, 100),
+    ),
+);
+
+// Color Vairables for Dark Theme
+$colors-dark: (
+    bg: (
+        50: map.get($colors-base, neutral, dark),
+        100: map.get($colors-base, neutral, dark-100),
+        200: map.get($colors-base, neutral, dark-200),
+        300: map.get($colors-base, neutral, dark-300),
+        400: map.get($colors-base, neutral, dark-400),
+        500: map.get($colors-base, neutral, dark-500),
+    ),
+    txt: (
+        50: map.get($colors-base, neutral, light),
+        100: map.get($colors-base, neutral, 500),
+        200: map.get($colors-base, neutral, 700),
+        300: map.get($colors-base, neutral, 900),
+    ),
+    card: (
+        50: map.get($colors-base, neutral, dark-100),
+        100: map.get($colors-base, neutral, dark),
+    ),
+);

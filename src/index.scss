@@ -1,0 +1,35 @@
+@use "./styles/" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    @include generateColorVariable($colors-base);
+}
+
+.light {
+    @include generateColorVariable($colors-light);
+    color: var(--clr-neutral-dark);
+    // --clr-shadow: 225, 51%, 44%;
+}
+
+.dark {
+    @include generateColorVariable($colors-dark);
+    color: var(--clr-neutral-light);
+    // --clr-shadow: 0, 0%, 0%;
+}
