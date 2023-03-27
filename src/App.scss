@@ -1,0 +1,16 @@
+.app {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--clr-card-100);
+    transition: background-color 200ms ease;
+    display: grid;
+    grid-template-columns: min-content 24rem 1fr;
+}
+
+.wrapper {
+    background-color: var(--clr-bg-100);
+}
+
+.main-section {
+    background-color: var(--clr-bg-50);
+}

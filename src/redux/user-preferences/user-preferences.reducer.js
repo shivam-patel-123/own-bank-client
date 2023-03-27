@@ -11,9 +11,12 @@ const userPreferencesSlice = createSlice({
         toggleTheme(state) {
             state.theme = state.theme === "light" ? "dark" : "light";
         },
+        changeTheme(state, action) {
+            state.theme = action.payload;
+        },
     },
 });
 
-export const { toggleTheme } = userPreferencesSlice.actions;
+export const { toggleTheme, changeTheme } = userPreferencesSlice.actions;
 
 export default userPreferencesSlice.reducer;
