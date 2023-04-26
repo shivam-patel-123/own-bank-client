@@ -1,11 +1,37 @@
 @use "./styles/" as *;
 
+@font-face {
+    font-family: "kreditfront";
+    src: local("kreditfront"), url(./fonts/kreditfront.ttf) format("truetype");
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+    font-family: "kreditback";
+    src: local("kreditback"), url(./fonts/kreditback.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "credc";
+    src: local("credc"), url(./fonts/credc.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "creditcard";
+    src: local("creditcard"), url(./fonts/creditcard.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "oblivious";
+    src: local("oblivious"), url(./fonts/OBLIVIOUSFONT.TTF) format("truetype");
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
-    outline: none;
+    // transition: all 500ms ease;
 }
 
 html {
@@ -18,6 +44,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+a {
+    text-decoration: none;
+}
+
 :root {
     @include generateColorVariable($colors-base);
 }
@@ -25,11 +55,11 @@ body {
 .light {
     @include generateColorVariable($colors-light);
     color: var(--clr-neutral-dark);
-    // --clr-shadow: 225, 51%, 44%;
+    --clr-shadow: 225, 51%, 44%, 0.16;
 }
 
 .dark {
     @include generateColorVariable($colors-dark);
     color: var(--clr-neutral-light);
-    // --clr-shadow: 0, 0%, 0%;
+    --clr-shadow: 0, 0%, 0%, 0.25;
 }
