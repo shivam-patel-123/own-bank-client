@@ -9,7 +9,7 @@ import SignUpPage from "./pages/SignUpPage/SignUpPage.jsx";
 import path from "./constants/path";
 import AccountApproveRequest from "./pages/AccountApproveRequest/AccountApproveRequest";
 import RestrictedRoute from "./RestrictedRoute";
-import { Navigation, AvatarList } from "./components";
+import { Navigation, AvatarList, Header } from "./components";
 import useAuth from "./hooks/useAuth";
 import { LoadingBar, LoadingBarContainer } from "./styles/utils/Loading.style";
 import { useSelector } from "react-redux";
@@ -41,9 +41,13 @@ function App() {
             {account
                 ? !isFetching && (
                       <>
-                          <AvatarList avatars={linkedAccountsGenerator()} />
-                          <Navigation />
+                          <div className="left-section">
+                              <AvatarList avatars={linkedAccountsGenerator()} />
+                              <Navigation />
+                          </div>
+
                           <div className="main-section">
+                              <Header />
                               <Routes>
                                   <Route element={<PrivateRoute account={account} />}>
                                       <Route element={<RestrictedRoute />}>

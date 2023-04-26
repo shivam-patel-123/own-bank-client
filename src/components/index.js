@@ -11,3 +11,5 @@ export { default as Avatar } from "./atoms/Avatar/Avatar.jsx";
 export { default as ProfileCard } from "./molecules/ProfileCard/ProfileCard.jsx";
 export { default as AvatarList } from "./organisms/AvatarList/AvatarList.jsx";
 export { default as VirtualCard } from "./molecules/VirtualCard/VirtualCard.jsx";
+export { default as Header } from "./organisms/Header/Header.jsx";
+export { default as Switch } from "./atoms/Switch/Switch.jsx";
